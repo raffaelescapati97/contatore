@@ -45,8 +45,8 @@ p {
 }
 
 #decrement {
-    font-size: 38px;
-    padding: 8px 20px;
+    font-size: 52px;
+    padding: 0px 22px;
     background-color: #dc3545;
     color: white;
     border: 2px solid #c82333;
@@ -70,4 +70,41 @@ p {
 
 #reset:hover {
     background-color: #5a5a5a;
+}
+
+@media (max-width: 600px) {
+    .section {
+        flex-direction: column;
+        width: 100px;
+    }
+
+    #increment, #decrement {
+        font-size: 28px;
+        padding: 6px 15px;
+    }
+
+    #increment {
+        padding: 8px 15px;
+        margin: 10px 15px;
+        order: 1;
+    }
+
+    p {
+        order: 2;
+        margin: 15px;
+    }
+
+    #decrement {
+        font-size: 38px;
+        padding: 2px 17px;
+        margin: 10px 15px;
+        order: 3;
+    }
+
+    #reset {
+        font-size: 16px;
+        padding: 8px 15px;
+        margin-top: 20px;
+        order: 4;
+    }
 }
