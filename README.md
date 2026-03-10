@@ -6,19 +6,6 @@ Il progetto è stato realizzato utilizzando **HTML**, **CSS** e **JavaScript**.
 ---
 
 ## 🚀 Funzionalità
-Perfetto, Raffaele — aggiorno il README in modo elegante e coerente con la nuova struttura del progetto.  
-Ho integrato le cartelle **assets**, **css** e **js**, mantenendo uno stile pulito e professionale.
-
----
-
-# 📟 Contatore
-
-Una semplice applicazione web che permette di incrementare, decrementare e resettare un contatore partendo dal valore iniziale di **0**.  
-Il progetto è stato realizzato utilizzando **HTML**, **CSS** e **JavaScript**.
-
----
-
-## 🚀 Funzionalità
 
 - **Incremento (+)**: aumenta il valore del contatore di 1  
 - **Decremento (-)**: diminuisce il valore del contatore di 1  
