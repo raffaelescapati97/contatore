@@ -1,27 +1,65 @@
+const createButton = (id, text) => {
+    const button = document.createElement('button');
+    button.id = id;
+    button.textContent = text;
+    return button;
+};
+
+const createCounterApp = () => {
+    const container = document.createElement('div');
+    container.className = 'container';
+
+    const section = document.createElement('div');
+    section.className = 'section';
+
+    const decrementButton = createButton('decrement', '-');
+    const counterElement = document.createElement('p');
+    counterElement.id = 'counter';
+    counterElement.textContent = '0';
+    const incrementButton = createButton('increment', '+');
+    const resetButton = createButton('reset', 'Reset');
+
+    section.appendChild(decrementButton);
+    section.appendChild(counterElement);
+    section.appendChild(incrementButton);
+    section.appendChild(resetButton);
+    container.appendChild(section);
+
+    document.body.appendChild(container);
+
+    return {
+        counterElement,
+        incrementButton,
+        decrementButton,
+        resetButton,
+    };
+};
+
 let counter = 0;
 
-        const counterElement = document.getElementById('counter');
-        const incrementButton = document.getElementById('increment');
-        const decrementButton = document.getElementById('decrement');
-        const resetButton = document.getElementById('reset');
+document.addEventListener('DOMContentLoaded', () => {
+    const { counterElement, incrementButton, decrementButton, resetButton } = createCounterApp();
 
-        const increment = () => {
-            counter++;
-            counterElement.textContent = counter;
-        };
+    const updateDisplay = () => {
+        counterElement.textContent = counter;
+    };
 
-        const decrement = () => {
-            counter--;
-            counterElement.textContent = counter;
-        };
+    const increment = () => {
+        counter++;
+        updateDisplay();
+    };
 
-        const reset = () => {
-            counter = 0;
-            counterElement.textContent = counter;
-        };
+    const decrement = () => {
+        counter--;
+        updateDisplay();
+    };
 
-        incrementButton.addEventListener('click', increment);
+    const reset = () => {
+        counter = 0;
+        updateDisplay();
+    };
 
-        decrementButton.addEventListener('click', decrement);
-
-        resetButton.addEventListener('click', reset);
+    incrementButton.addEventListener('click', increment);
+    decrementButton.addEventListener('click', decrement);
+    resetButton.addEventListener('click', reset);
+});
